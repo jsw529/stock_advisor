@@ -47,6 +47,15 @@ if symbol:
             st.markdown("※ 뉴스 데이터는 외부 API 또는 크롤링 기능 추가 필요")
             st.markdown("- 예시: 삼성전자, 새로운 반도체 라인 가동 예정")
             st.markdown("- 예시: 외국인 투자자 순매수 증가")
+# Create a requirements.txt file for the Streamlit stock app
+file_path = "/mnt/data/requirements.txt"
 
-    except Exception as e:
-        st.error(f"❌ 오류 발생: {str(e)}")
+requirements = """
+streamlit
+yfinance
+"""
+
+with open(file_path, "w") as f:
+    f.write(requirements.strip())
+
+file_path
